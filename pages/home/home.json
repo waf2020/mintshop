@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {},
+   
+    
+   
+    "navigationBarTitleText": "购物街",
+    "backgroundColor": "#BBA344",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  
+}
