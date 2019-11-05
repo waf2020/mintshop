@@ -1,6 +1,6 @@
 import request from './network.js'
 export function getMultData(){
-  request({
+ return request({
    url: '/home/multidata'
 })
 

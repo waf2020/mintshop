@@ -1,0 +1,8 @@
+
+
+<view class='control'>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+   <view class='control-item {{index == currentIndex ? "isActive": "" }}' bind:tap="handlebindtap" data-index="{{index}}">{{item}}</view>
+    
+  </block>
+</view>

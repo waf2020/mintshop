@@ -1,3 +1,18 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+
+<!-- 轮播图 -->
+<m-swiper list="{{banner}}"/>
+
+<!-- 推荐 -->
+<m-recommend  recommend="{{recommend}}"/>
+
+<!-- 本周流行 -->
+<view class='recommend-img'>
+  <image src='../../assets/home/recommend_bg.jpg'/>
+</view>
+
+<!-- 每日推荐 -->
+<m-contorl bind:myhandlebindtap="hmyhandlebindtap" list="{{['流行','热销','上新']}}" />
+
 

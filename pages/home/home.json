@@ -1,6 +1,11 @@
 {
   "component": true,
-  "usingComponents": {},
+  "usingComponents": {
+
+    "m-swiper":"../../components/m-swiper/m-swiper",
+    "m-recommend":"../../components/m-recommend/m-recommend",
+    "m-contorl":"../../components/m-contorl/m-contorl"
+  },
    
     
    

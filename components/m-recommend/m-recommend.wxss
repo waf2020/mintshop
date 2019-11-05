@@ -1,0 +1,23 @@
+/* components/m-recommend/m-recommend.wxss */
+.recommend{
+  display: flex;
+ 
+  text-align: center;
+  margin-top: 28rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 18rpx solid #eee;
+}
+.recommend-item{
+   flex: 1;
+}
+.recommend-item image {
+  height: 160rpx;
+  width: 160rpx;
+}
+
+
+ .recommend-title {
+  color: #555;
+  font-size: 29rpx;
+  padding-top: 24rpx;
+} 

@@ -1,0 +1,15 @@
+/* components/m-contorl/m-contorl.wxss */
+.control {
+  display: flex;
+  text-align: center;
+}
+.control-item {
+  flex: 1;
+  padding-bottom: 14rpx;
+}
+.isActive {
+  color: #ff5777;
+  
+  border-bottom: 1px solid #ff5777;
+  
+}

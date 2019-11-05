@@ -1,0 +1,6 @@
+/* components/m-swiper/m-swiper.wxss */
+.banner-item image {
+  width: 100%;
+  height: 100%;
+  
+}

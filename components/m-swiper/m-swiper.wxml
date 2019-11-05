@@ -1,0 +1,14 @@
+<!--components/m-swiper/m-swiper.wxml-->
+
+<!-- 轮播图 -->
+<swiper class='banner' indicator-dots
+ autoplay
+ interval="2000"
+ indicator-active-color="#ff5777"
+ circular>
+   <block wx:for="{{list}}" wx:key="{{index}}">
+    <swiper-item class="banner-item"> 
+     <image  src="{{item.image}}" mode='widthFix' />
+    </swiper-item>
+   </block> 
+</swiper>

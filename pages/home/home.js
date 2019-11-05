@@ -9,35 +9,70 @@ Page({
    * 组件的初始数据
    */
   data: {
-
+   banner:[],
+    recommend:[],
+    goods:{
+      pop:{page:0,list:[]},
+      sell: { page: 0, list: [] },
+      new: { page: 0, list: [] },
+    }
   },
-  
 
-  /**
-   * 组件的方法列表
-   */
+
+  
   
 
   onLoad(options) {
     console.log('onLoad监听页面加载');
-    getMultData()
-   
+
+    this._getMultData();
+    this._getProduct('pop');
+    this._getProduct('sell');
+    this._getProduct('new');
+    
 
   },
 
-  onReady() {
-    console.log('onReady监听页面初次渲染完成');
+ 
+
+  
+
+
+
+  hmyhandlebindtap(e){
+    console.log('home:e', e.detail);
   },
 
-  onShow() {
-    console.log('onShow监听页面显示');
+  //加载轮播图和推荐数据
+
+  _getProduct(type){
+    //获取页码
+    const page = this.data.goods[type].page + 1;
+    console.log('type,',type);
+    getProduct(type,page).then(res => {
+      console.log('res===', res);
+    })
   },
 
-  onHide() {
-    console.log('onHide监听页面隐藏');
+
+  _getMultData() {
+    
+    getMultData().then(res => {
+    
+      const banners = res.data.data.banner.list;
+      const recommends = res.data.data.recommend.list;
+
+      this.setData({
+        banner: banners,
+        recommend: recommends
+      })
+      console.log(banners);
+
+    })
   },
 
-  onUnload() {
-    console.log('onUnload监听页面卸载');
-  }
+  //加载分类数据
+  
+    
+  
 })
