@@ -19,6 +19,8 @@ Page({
      this.setData({
        currentIndex: e.currentTarget.dataset.index
      })
+
+     console.log("")
      
   },
 
@@ -26,14 +28,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   
+    let self=this;
     getCategory().then(res=>{
       console.log('res',res.data);
-      this.setData({
+      self.setData({
         navLeftItems: res.data.navLeftItems,
         navRightItems: res.data.navRightItems
 
-      })
+      });
+    
+      console.log('navRightItems', this.data.navRightItems[this.data.currentIndex]);
     })
+   
   },
 
   /**

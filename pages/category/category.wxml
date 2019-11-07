@@ -2,9 +2,35 @@
 
 
 <view class='containers'>
-   <scroll-view wx:for="{{navLeftItems}}" wx:key="{{index}}" class='categorys' >
-       <view class='categorys-item  {{currentIndex==index ? "isCategorys" : " "}}' bind:tap="handlebindtap" data-index='{{index}}'>
+   <scroll-view class='categorys-left' >
+       <block  wx:for="{{navLeftItems}}" wx:key="{{index}}">
+       <view class='categorys-item-left  {{currentIndex==index ? "isCategorys" : " "}}' bind:tap="handlebindtap" data-index='{{index}}'>
        <text class='categorys-item-text {{currentIndex==index ? "isActive" : " "}}'>{{item}}</text>
        </view>
+       </block>
+   </scroll-view>
+
+   <scroll-view class="categorys-right" scroll-y> 
+       <block wx:for="{{navRightItems[currentIndex]}}" wx:key="{{index}}" >
+
+          <view class="categorys-item-right" wx:for-item="item">
+             <text class="categorys-item-right-text">{{item.title}}</text>
+
+             <view class="ca-r-second">
+               <block wx:for="{{item.desc}}" wx:for-item="list" wx:key="{{index}}">
+                  <view class="ca-r-second-warp"> 
+                   
+                    <image class="ca-r-second-img" src="{{list.img}}"/> 
+                     <view class="title">{{list.text}}</view>
+                   </view>
+               </block>
+             </view>
+         
+         
+
+           </view>
+          </block>
+          
+       
    </scroll-view>
 </view>
