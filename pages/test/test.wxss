@@ -1,0 +1,14 @@
+/* pages/test/test.wxss */
+ .box {
+          display: flex;  
+          flex-flow:column wrap;
+          height: 100px;
+        }
+        .item {
+            margin: 10px;
+            width: calc(100%/3 - 20px);
+        }
+        .item imageg{
+            width: 100%;
+            height:100%;
+        }

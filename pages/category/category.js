@@ -1,18 +1,39 @@
 // pages/category/category.js
+
+import { getCategory } from '../../utils/category.js'
+console.log('getCategory', typeof (getCategory));
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    navLeftItems:[],
+    navRightItems:[],
+    currentIndex:0
+  },
 
+//监听分类点击
+  handlebindtap(e){
+     
+     this.setData({
+       currentIndex: e.currentTarget.dataset.index
+     })
+     
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    getCategory().then(res=>{
+      console.log('res',res.data);
+      this.setData({
+        navLeftItems: res.data.navLeftItems,
+        navRightItems: res.data.navRightItems
 
+      })
+    })
   },
 
   /**

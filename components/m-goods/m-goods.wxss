@@ -1,0 +1,27 @@
+/* components/m-goods/m-goods.wxss */
+.goods > .goods_image {
+  width: 100%;
+  border-radius: 10rpx;
+   
+} 
+.goods {
+  text-align: center;
+}
+.goods > .title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+}
+ .price {
+  color: #ff5777
+}
+.collection {
+  width: 30rpx;
+  height: 30rpx;
+  padding-left: 16rpx;
+}
+.cfav {
+  font-size: 30rpx;
+}

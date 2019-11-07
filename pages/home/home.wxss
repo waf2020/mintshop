@@ -1,5 +1,30 @@
 /* pages/home/home.wxss */
 .recommend-img image{
   width: 100%;
+ 
+  
+}
+
+
+.h-goods {
+  margin-top: 24rpx;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.h-goods-item {
+  width: 48%;
+}
+
+.to-top{
+ position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  right: 20rpx;
+  bottom: 34rpx;
+}
+.to-top image{
+  width: 100%;
+  height: 100%;
   
 }

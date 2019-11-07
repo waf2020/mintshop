@@ -1,0 +1,48 @@
+<!--pages/test/test.wxml-->
+
+
+<view class="box">
+    <view class="item">
+        <image src="../../assets/test/one.jpg"  />
+    </view>
+
+       <view class="item">
+        <image  src="../../assets/test/timg.jpg"  />
+    </view>
+
+       <view class="item">
+         <image src="../../assets/test/one.jpg"  />
+    </view>
+
+    
+        <view class="item">
+        <image  src="../../assets/test/timg.jpg"  />
+    </view>
+
+     <view class="item">
+         <image src="../../assets/test/one.jpg"  />
+    </view>
+
+        <view class="item">
+        <image src="../../assets/test/one.jpg"  />
+    </view>
+
+       <view class="item">
+        <image  src="../../assets/test/timg.jpg"  />
+    </view>
+
+       <view class="item">
+         <image src="../../assets/test/one.jpg"  />
+    </view>
+
+    
+        <view class="item">
+        <image  src="../../assets/test/timg.jpg"  />
+    </view>
+
+     <view class="item">
+         <image src="../../assets/test/one.jpg"  />
+    </view>
+    
+    </view>
+

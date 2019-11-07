@@ -3,7 +3,10 @@
 
 <!-- 轮播图 -->
 <m-swiper list="{{banner}}"/>
-
+<!-- 回顶部 -->
+<view class='to-top' bind:tap="go_top">
+  <image src="../../assets/common/top.png"/>
+</view>
 <!-- 推荐 -->
 <m-recommend  recommend="{{recommend}}"/>
 
@@ -14,5 +17,14 @@
 
 <!-- 每日推荐 -->
 <m-contorl bind:myhandlebindtap="hmyhandlebindtap" list="{{['流行','热销','上新']}}" />
+
+<view class='h-goods'>
+ <block wx:for="{{goods[currentGoods].list}}" wx:key="{{index}}">
+ <m-goods goods_obj="{{item}}" class="h-goods-item"/>
+ 
+ 
+ </block>
+</view>
+
 
 

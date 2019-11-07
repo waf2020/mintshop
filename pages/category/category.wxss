@@ -1,1 +1,32 @@
 /* pages/category/category.wxss */
+
+
+.categorys {
+  width: 100%;
+  /* text-align: center */
+}
+
+.categorys-item-text {
+
+ padding-left: 16rpx;
+ font-size: 34rpx;
+ 
+}
+.categorys-item {
+padding-left: 18rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 26%;
+  background: #f8f8f8;
+ 
+
+}
+.isCategorys{
+  background-color: white;
+}
+
+.isActive {
+ border-left: 3px solid #ff5777;
+ background-color: white;
+ color: #ff5777;
+}

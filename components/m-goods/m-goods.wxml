@@ -1,0 +1,11 @@
+<!--components/m-goods/m-goods.wxml-->
+
+<view class='goods'>
+<image class='goods_image' src="{{goods_obj.show.img}}" mode='widthFix'/>
+<text class='title'>{{goods_obj.title}}</text>
+ <view class='info'>
+ <text class='price'>￥{{goods_obj.price}}</text>
+ <image class="collection" src='../../assets/common/favor.png'></image>
+ <text class='cfav'>{{goods_obj.cfav}}</text>
+ </view>
+</view>
