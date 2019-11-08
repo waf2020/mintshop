@@ -1,0 +1,45 @@
+/* pages/list/list.wxss */
+.containers {
+  height: 100%;
+}
+.c-items {
+  display: flex;
+  padding-top: 20rpx;
+}
+
+.list-left image {
+  height: 230rpx;
+  width: 200rpx;
+}
+
+.list-right-title {
+  color: #333;
+   display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 81rpx;
+  overflow: hidden;
+  font-size: 31rpx;
+  /* text-overflow: ellipsis; */
+   word-break: break-all;
+  
+  
+}
+
+.list-right-price {
+  padding-top: 10rpx;
+  color: red;
+}
+.list-right-evaluate text {
+ font-size: 30rpx;
+ color: #999;
+}
+.list-right-evaluate text:nth-child(2){
+  padding-left: 10rpx;
+
+}
+
+.list-right {
+  border-bottom: 1px solid  #e8e8ed;
+}

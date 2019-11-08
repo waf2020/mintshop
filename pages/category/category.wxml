@@ -10,6 +10,7 @@
        </block>
    </scroll-view>
 
+<!-- 右侧信息 -->
    <scroll-view class="categorys-right" scroll-y> 
        <block wx:for="{{navRightItems[currentIndex]}}" wx:key="{{index}}" >
 
@@ -18,7 +19,8 @@
 
              <view class="ca-r-second">
                <block wx:for="{{item.desc}}" wx:for-item="list" wx:key="{{index}}">
-                  <view class="ca-r-second-warp"> 
+               <!-- 小分类开始 -->
+                  <view class="ca-r-second-warp" bind:tap="handle_category_item" data-text='{{list.text}}'> 
                    
                     <image class="ca-r-second-img" src="{{list.img}}"/> 
                      <view class="title">{{list.text}}</view>

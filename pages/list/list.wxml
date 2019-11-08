@@ -1,0 +1,19 @@
+<!--pages/list/list.wxml-->
+<scroll-view class='containers' scroll-y>
+  <block wx:for="{{datalist}}" wx:key="{{index}}">
+   <view class='c-items'bind:tap="handle">
+      <view class='list-left'>
+        <image src='{{item.cover}}'/>
+      </view>
+
+      <view class='list-right'>
+        <view class='list-right-title'>{{item.title}}</view>
+        <view class='list-right-price' >￥{{item.price}}</view>
+        <view class='list-right-evaluate'>
+           <text>{{item.comment}}条评价</text>
+           <text>好评率 {{item.rate}}</text>
+        </view>
+      </view>
+  </view>
+  </block>
+</scroll-view>

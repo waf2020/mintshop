@@ -1,6 +1,6 @@
 // pages/category/category.js
 
-import { getCategory } from '../../utils/category.js'
+import { getCategory} from '../../utils/category.js'
 console.log('getCategory', typeof (getCategory));
 Page({
 
@@ -22,6 +22,17 @@ Page({
 
      console.log("")
      
+  },
+
+//点击小分类，获取商品信息
+
+  handle_category_item(e){
+        console.log(e.currentTarget.dataset.text);
+    let text = e.currentTarget.dataset.text;
+    wx.navigateTo({
+      url: '/pages/list/list?text=' + text
+      
+    })
   },
 
   /**
