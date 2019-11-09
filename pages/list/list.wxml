@@ -1,7 +1,7 @@
 <!--pages/list/list.wxml-->
-<scroll-view class='containers' scroll-y>
+<view class='containers' >
   <block wx:for="{{datalist}}" wx:key="{{index}}">
-   <view class='c-items'bind:tap="handle">
+   <view class='c-items'bind:tap="handleItemdetails" data-id='{{item.id}}'>
       <view class='list-left'>
         <image src='{{item.cover}}'/>
       </view>
@@ -16,4 +16,9 @@
       </view>
   </view>
   </block>
-</scroll-view>
+  <view class='endview' wx:if='{{noData}}'>
+    <text>都被你看光啦(～￣▽￣)～没有更多数据</text>
+    </view>
+    
+
+</view>

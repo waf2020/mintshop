@@ -1,6 +1,9 @@
 /* pages/list/list.wxss */
 .containers {
   height: 100%;
+  /* border: 1px solid red;
+  padding-bottom: 280rpx; */
+
 }
 .c-items {
   display: flex;
@@ -42,4 +45,12 @@
 
 .list-right {
   border-bottom: 1px solid  #e8e8ed;
+}
+.endview{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
 }

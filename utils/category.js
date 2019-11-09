@@ -13,9 +13,8 @@ export function getCategoryList() {
   return request({
     url: '/api/profiles/productionsList'
   })
-
-
 }
+
 //分类详情页上拉加载更多
 export function getCategoryListNext(o) {
   return request({
@@ -27,4 +26,10 @@ export function getCategoryListNext(o) {
   })
 
 
+}
+
+export function getItemDetail() {
+  return request({
+    url: '/api/profiles/productionDetail'
+  })
 }
