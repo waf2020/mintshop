@@ -11,7 +11,10 @@ Page({
    */
   data: {
       partData:[],
-      baitiao:[]
+      baitiao:[],
+      baitiaodesc:"【白条支付】首单享立减优惠",
+      count:1,
+      
   },
 
   /**
@@ -26,18 +29,18 @@ Page({
     let id = options.id;
     getItemDetail().then(res=>{
       let resule="";
-      console.log('res===',res);
+      //console.log('res===',res);
       res.data.forEach(list=>{
         if(list.partData.id==id){
          resule=list
         }
       })
-      console.log('resule', resule);
+      //console.log('resule', resule);
       self.setData({
         partData:resule.partData
       })
 
-      console.log('partData', self.data.partData);
+     // console.log('partData', self.data.partData);
 
       wx.hideLoading()
     })
@@ -91,5 +94,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  //监听白条的点击
+  handlebaitiao(){
+    console.log(123)
   }
 })

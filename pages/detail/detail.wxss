@@ -9,7 +9,7 @@
 }
 
 .content {
-  border: 1px solid #ccc;
+  border-top: 1px solid #e8e8ed;
   margin-top: 12rpx;
   padding: 16rpx;
 }

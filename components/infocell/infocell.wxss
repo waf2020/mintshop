@@ -1,0 +1,32 @@
+/* components/infocell/infocell.wxss */
+.containers {
+    font-size: 28rpx;
+   
+    width: 100%;
+    justify-content: space-between;
+    height: 90rpx;
+    line-height: 90rpx;
+    border:1px solid #e8e8ed;
+    margin-bottom: 26rpx;
+    padding: 0 30rpx;
+
+}
+.containers text {
+  display: inline-block;
+}
+.left {
+   color: #999;
+   
+   /* width: 15% */
+   
+}
+.center{
+   padding-left: 24rpx; 
+  width: 80%;
+}
+.right{
+
+  font-weight: bold;
+  width: 10%;
+
+}

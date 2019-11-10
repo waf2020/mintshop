@@ -17,5 +17,9 @@
      <text class="c-title">{{partData.title}}</text>
      <text>￥{{partData.price}}</text>
    </view>
+
+   <!-- 支付 -->
+   <infocell title="支付" desc="{{baitiaodesc}}" bind:bindstrips="handlebaitiao"/>
+   <infocell title="已选" desc="{{count}}件"/>
    
 </view>

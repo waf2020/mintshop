@@ -1,0 +1,6 @@
+<!--components/infocell/infocell.wxml-->
+<view class='containers'>
+  <text class='left'>{{title}}</text>
+  <text class='center'>{{desc}}</text>
+  <text class='right' bind:tap="bindstrip">...</text>
+</view>
