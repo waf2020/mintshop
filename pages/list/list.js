@@ -10,7 +10,8 @@ Page({
     datalist:[],
     page:1,
     size:5,
-    noData:false
+    noData:false,
+  
   },
 
   /**
@@ -30,7 +31,8 @@ Page({
     getCategoryList().then(res=>{
       //console.log('resss',res);
       this.setData({
-        datalist:res.data
+        datalist:res.data,
+        
       })
       wx.hideLoading();
     })

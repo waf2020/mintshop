@@ -1,2 +1,38 @@
-<!--components/iou/iou.wxml-->
-<text>components/iou/iou.wxml</text>
+<view class="boxs">
+ 
+  <view class="main">
+    <view class="hd">
+      <text>打白条购买</text>
+      <text>x</text>
+    </view>
+
+    <view class="bd">
+      <block wx:for="{{baitiao}}" wx:key="{{index}}">
+          <image src="/image/unselect.png"></image>
+          <view class="v-desc">
+            <text class='dec'>{{item.desc}}</text>
+            <text class='tip'>{{item.tip}}</text>
+          </view>
+      </block>
+    </view>
+
+
+    <view class="btn-bom">
+    立即打白条
+    </view>
+   
+   
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

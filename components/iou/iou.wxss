@@ -1,1 +1,62 @@
-/* components/iou/iou.wxss */
+.boxs {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.7);
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* .fa {
+  position: relative;
+} */
+
+.main {
+  position: relative;
+ 
+   bottom: 0px ;  
+  width: 100%;
+
+}
+.bd {
+  display: flex;
+}
+.bd image {
+  display: inline-block;
+  height: 36rpx;
+  width: 36rpx;
+}
+.bd text {
+  display: block;
+}
+.hd {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+font-size: 28rpx;
+font-weight: 700;
+color: #333;
+background-color: #f3f2f8;
+
+}
+.hd text {
+  display: inline-block;
+}
+.hd text:nth-child(1){
+  width: 90%;
+}
+
+.btn-bom {
+  font-size: 32rpx;
+height: 100rpx;
+line-height: 100rpx;
+border-radius: 0;
+background: #e4393c;
+color: #fff;
+width: 100%;
+text-align: center;
+
+}
+

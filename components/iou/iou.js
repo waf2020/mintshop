@@ -4,14 +4,16 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    baitiao: {
+      type: Array
+    }
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-
+       
   },
 
   /**

@@ -1,5 +1,5 @@
 <!--pages/detail/detail.wxml-->
-
+<view class="box">
 <view class='containers'>
 
 <!-- 轮播图 -->
@@ -22,4 +22,9 @@
    <infocell title="支付" desc="{{baitiaodesc}}" bind:bindstrips="handlebaitiao"/>
    <infocell title="已选" desc="{{count}}件"/>
    
+   <!-- 白条 -->
+ 
+   <!-- 白条 -->
+   <iou baitiao="{{baitiao}}"/>
+</view>
 </view>

@@ -35,10 +35,12 @@ Page({
          resule=list
         }
       })
-      //console.log('resule', resule);
+      console.log('resule', resule);
       self.setData({
-        partData:resule.partData
+        partData:resule.partData,
+        baitiao:resule.baitiao
       })
+      console.log('baitiao', self.data.baitiao);
 
      // console.log('partData', self.data.partData);
 
