@@ -1,0 +1,19 @@
+<view class="box">
+  <view class="main">
+    <view class="hd">
+    </view>
+
+     <view class="bd">
+       <view>数量</view>
+       <view>
+         <text>-</text>
+         <text>num</text>
+         <text>+</text>
+       </view>
+     </view>
+
+    <view class="btn-bom">
+   
+    </view>
+  </view>
+</view>

@@ -13,22 +13,47 @@
 } */
 
 .main {
+  background: white;
   position: relative;
- 
+  top: 45%;
    bottom: 0px ;  
   width: 100%;
 
 }
 .bd {
-  display: flex;
+  padding: 32rpx 18rpx;
+
+}
+.tip {
+  color: #999;
+
+}
+.bd-item {
+  margin: 8rpx 0;
 }
 .bd image {
   display: inline-block;
   height: 36rpx;
   width: 36rpx;
+  vertical-align: center;
 }
-.bd text {
+.v-desc text {
   display: block;
+  margin: 6rpx 0;
+
+
+ 
+}
+
+.v-desc{
+  display: inline-block;
+  padding-left: 12rpx;
+
+}
+
+.v-desc text {
+  font-size: 24rpx;
+
 }
 .hd {
   width: 100%;

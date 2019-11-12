@@ -19,12 +19,14 @@
    </view>
 
    <!-- 支付 -->
-   <infocell title="支付" desc="{{baitiaodesc}}" bind:bindstrips="handlebaitiao"/>
+   <infocell title="支付" desc="{{baitiaodesc}}" bind:bindstrips="handlebaitiao" bind:/>
    <infocell title="已选" desc="{{count}}件"/>
    
-   <!-- 白条 -->
+ 
  
    <!-- 白条 -->
-   <iou baitiao="{{baitiao}}"/>
+   <iou baitiao="{{baitiao}}" hidebaitiao="{{hidebaitiao}}" bind:checkbaitiaodesc="handledesc"/>
+   <!-- 已选件数 -->
+   <buy/>
 </view>
 </view>

@@ -1,23 +1,26 @@
-<view class="boxs">
- 
+<view class="boxs" hidden="{{hidebaitiao}}">
+
   <view class="main">
     <view class="hd">
       <text>打白条购买</text>
-      <text>x</text>
+      <text bind:tap="hide_baitiao">x</text>
     </view>
 
     <view class="bd">
       <block wx:for="{{baitiao}}" wx:key="{{index}}">
-          <image src="/image/unselect.png"></image>
+        <view class="bd-item" bind:tap="selectCheck" data-index="{{index}}">
+          <image wx:if="{{item.select}}" src="/image/selected.png"></image>
+          <image wx:else src="/image/unselect.png"></image>
           <view class="v-desc">
             <text class='dec'>{{item.desc}}</text>
             <text class='tip'>{{item.tip}}</text>
           </view>
+        </view>
       </block>
     </view>
 
 
-    <view class="btn-bom">
+    <view class="btn-bom" bind:tap="handle_btn_baitiao">
     立即打白条
     </view>
    

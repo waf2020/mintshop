@@ -14,6 +14,7 @@ Page({
       baitiao:[],
       baitiaodesc:"【白条支付】首单享立减优惠",
       count:1,
+      hidebaitiao:true
       
   },
 
@@ -100,6 +101,21 @@ Page({
 
   //监听白条的点击
   handlebaitiao(){
-    console.log(123)
+   
+    this.setData({
+      hidebaitiao:false
+    })
+    //console.log('hidebaitiao', this.data.hidebaitiao)
+  },
+
+  //动态切换支付方式
+  handledesc(e){
+  //   console.log('e',e)
+  //  console.log('你选址了不同的支付方式',e.detail);
+  //   console.log('this.data.baitiao[e.detail].desc', this.data.baitiao[e.detail].desc);
+    let desc = this.data.baitiao[e.detail].desc;
+    this.setData({
+      baitiaodesc: desc
+    })
   }
 })
