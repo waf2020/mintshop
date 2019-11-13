@@ -14,7 +14,8 @@ Page({
       baitiao:[],
       baitiaodesc:"【白条支付】首单享立减优惠",
       count:1,
-      hidebaitiao:true
+      hidebaitiao:true,
+    hidebuy:true
       
   },
 
@@ -117,5 +118,23 @@ Page({
     this.setData({
       baitiaodesc: desc
     })
+  },
+  
+  //弹出已选框
+  handlecounts(e){
+     this.setData({
+       hidebuy:false
+     })
+    // console.log('this.data.hidecount', this.data.hidebuy)
+  },
+
+  //监听已选数量的该表
+  handleCounts(e){
+      //console.log('eee',e.detail);
+      this.setData({
+        count: e.detail
+      })
   }
+
+ 
 })

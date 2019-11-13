@@ -1,0 +1,6 @@
+<!--components/amout/amout.wxml-->
+<view class="containers">
+  <text catch:tap="decrement">-</text>
+  <input type="number" value="{{count}}"  bind:input="getInput"/>
+  <text catch:tap="increment">+</text>
+</view>

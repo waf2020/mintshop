@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 .box{
   position: fixed;
   bottom: 0;
@@ -13,14 +9,63 @@
   width: 100%;
   left: 0;
   right: 0;
+background-color: rgba(0,0,0,.7);
+z-index: 999;
+}
+.main {
+  width: 100%;
+  position: absolute;
+}
+.hd {
+  height: 200rpx;
+  display: flex;
+  justify-content: space-between;
+  padding:22rpx 20rpx;
+ 
+}
+.hd image {
+  width: 180rpx;
+  height: 180rpx;
+  position: absolute;
+  top: -65%;
+  left: 15%;
+}
+
+.hd .image-box {
+  position: relative;
+  width: 30%;
+  height: 100rpx;
+}
+.info{
+   width: 50%; 
+  display: flex;
+  flex-direction: column;
+  
+}
+.info .price {
+  font-size: 36rpx;
+color: #e4393c;
+font-weight: 700;
+
+}
+.info .counts {
+  font-size: 28rpx;
+color: #666;
+margin-top: 16rpx;
+
+
 }
 
 
 
-
-
-
-
+.main{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 600rpx;
+  max-height: 800rpx;
+  background-color: #fff;
+}
 .btn-bom {
   font-size: 32rpx;
 height: 100rpx;
@@ -30,5 +75,13 @@ background: #e4393c;
 color: #fff;
 width: 100%;
 text-align: center;
+   position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0; 
 
+}
+amout {
+  float: right;
 }

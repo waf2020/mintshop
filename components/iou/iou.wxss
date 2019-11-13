@@ -14,8 +14,8 @@
 
 .main {
   background: white;
-  position: relative;
-  top: 45%;
+  position: absolute;
+  
    bottom: 0px ;  
   width: 100%;
 

@@ -1,19 +1,27 @@
-<view class="box">
+<view class="box" hidden="{{hidebuy}}">
+{{hidebuy}}
   <view class="main">
     <view class="hd">
+
+     <view class="image-box">
+      <image src="{{iteminfo.loopImgUrl[0]}}"></image>
+      </view>
+
+      <view class="info">
+        <view class="price">￥{{iteminfo.price}}</view>
+        <view class="counts">已选{{counts}}件</view>
+      </view>
+ <text bind:tap="handlehidebuy">x</text>
     </view>
+    
 
      <view class="bd">
-       <view>数量</view>
-       <view>
-         <text>-</text>
-         <text>num</text>
-         <text>+</text>
-       </view>
+       <text>数量</text>
+       <amout bind:mycountcheck="handlecountcheck"/>
      </view>
 
-    <view class="btn-bom">
-   
+    <view class="btn-bom" bind:tap="jioncart">
+      加入购物车
     </view>
   </view>
 </view>

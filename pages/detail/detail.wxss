@@ -30,3 +30,35 @@
     -webkit-box-orient: vertical; */
   
 }
+buy {
+ margin-bottom: 50rpx;
+}
+
+/* 购物车 */
+.btn-bar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+   width: 100%;
+   text-align: center;
+}
+
+.cart , .jion-cart {
+  /* position: relative; */
+  width: 50%;
+}
+.cart image {
+  width: 80rpx;
+height: 70rpx;
+
+}
+.jion-cart{
+background-color: #e4393c;
+color: #fff;
+font-size: 28rpx;
+ line-height: 100rpx;
+}
