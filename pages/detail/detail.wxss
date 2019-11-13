@@ -1,4 +1,7 @@
 /* pages/detail/detail.wxss */
+.containers{
+  padding-bottom: 100rpx;
+}
 .swiper-item{
   height: 820rpx;
 }
@@ -45,16 +48,50 @@ buy {
   flex-direction: row;
    width: 100%;
    text-align: center;
+    background-color: hsla(0,0%,100%,.95);
 }
 
 .cart , .jion-cart {
   /* position: relative; */
   width: 50%;
+  
+  
+}
+.cart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ 
+}
+
+.test {
+  height: 60rpx;
+  width: 60rpx;
+}
+.bage{
+  position: absolute;
+  left: 54%;
+  top: -4%;
+  border-radius: 55%;
+  border: 1px solid red;
+  line-height: 22rpx;
+  height: 22rpx;
+  width: 28rpx;
+  font-size: 20rpx;
+  color: red;
 }
 .cart image {
-  width: 80rpx;
-height: 70rpx;
+  width: 110rpx;
+height: 80rpx;
 
+}
+.cart-text {
+  font-size: 22rpx;
+color: #666;
+/* line-height: 3rpx; */
+ 
 }
 .jion-cart{
 background-color: #e4393c;

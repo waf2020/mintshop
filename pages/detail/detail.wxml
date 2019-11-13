@@ -18,27 +18,30 @@
      <text>￥{{partData.price}}</text>
    </view>
 
+  
+
    <!-- 支付 -->
    <infocell title="支付" desc="{{baitiaodesc}}" bind:bindstrips="handlebaitiao" bind:/>
    <infocell title="已选" desc="{{count}}件" bind:bindstrips="handlecounts" />
-   
- 
- 
-   <!-- 白条 -->
-   <iou baitiao="{{baitiao}}" hidebaitiao="{{hidebaitiao}}" bind:checkbaitiaodesc="handledesc"/>
-   <!-- 已选件数 -->
-   <buy hidebuy="{{hidebuy}}" bind:mycounts="handleCounts" iteminfo="{{partData}}"/>
-
-   <!-- 底部 购物车 -->
+  
+     <!-- 底部 购物车 -->
    <view class="btn-bar">
       <view class="cart">
          <image src='/image/cart.png'/>
-         <view>购物车</view>
+         <text class="bage">1</text>
+         <view class="cart-text">购物车</view>
       </view>
 
       <view class="jion-cart">
       加入购物车
       </view>
    </view>
+ 
+   <!-- 白条 -->
+   <iou baitiao="{{baitiao}}" hidebaitiao="{{hidebaitiao}}" bind:checkbaitiaodesc="handledesc"/>
+   <!-- 已选件数 -->
+   <buy hidebuy="{{hidebuy}}" bind:mycounts="handleCounts" iteminfo="{{partData}}"/>
+
+
 </view>
 </view>
