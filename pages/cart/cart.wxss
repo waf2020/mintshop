@@ -80,3 +80,49 @@ font-size: 30rpx;
    margin-top: 48rpx;
    float: right;
  }
+
+
+ /* 结算 */
+ .btn-pay {
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   display: flex;
+   height: 100rpx;
+   align-items: center;
+   border-top: 2rpx solid #e8e8ed;
+  padding-left: 10rpx;
+   
+ }
+
+ .allselect image {
+    width: 40rpx;
+     height: 40rpx;
+   vertical-align: middle;
+   margin-right: 8rpx;
+ }
+ .allselect {
+    width: 20%;
+    color: #999;
+
+ }
+ .allselect text {
+    font-size: 24rpx;
+
+ }
+ .counts {
+       width: 40%;
+ }
+ .counts text {
+   color:  #e4393c;
+ }
+ .pay {
+   width: 40%;
+   background: #e4393c;
+    color: #fff;
+    height: 100%;
+    line-height: 100rpx;
+    text-align: center;
+    font-weight: bold;
+ }

@@ -10,35 +10,58 @@
   </view>
 
 
-
-  <view class="list">
-      <block>
+<!-- 购物车list item -->
+  <view wx:else class="list">
+      <block wx:for="{{cartArray}}" wx:key="{{index}}">
         <view class="list-item">
 
-            <view class="view-image">
-                <image src="/image/unselect.png" class="icon"></image>
+            <view class="view-image" bind:tap="checkimageselect" data-index="{{index}}">
+                <image wx:if="{{item.select}}" src="/image/selected.png" class="icon"/>
+              
+                <image wx:else src="/image/unselect.png" class="icon"/>
+                 {{item.select}}
             </view>
 
             <view class="view-bd">
-              <view class="bd-image">
-                <image src="/image/classify/miphone.png"/>
+              <view class="bd-image" >
+                <image src="{{item.loopImgUrl[0]}}"/>
               </view>
 
                <view class="view-desc">
-                 <view class="title">黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机</view>
-                 <text class="price">338800</text>
-                 <amout/>
+                 <view class="title">{{item.title}}</view>
+                 <text class="price">{{item.price}}</text>
+                 <amout count="{{item.total}}" bind:mycountcheck="chenckcartupdata"
+                  bind:mycountcheck="checkcartdefaule"
+                  data-index="{{index}}"
+                 />
                </view>
 
             </view>
         </view>
       </block>
-
-
   </view>
 
 
+  <!-- 总计，合算 -->
+<view class="btn-pay">
+  <view class="allselect"  bind:tap="allselect">
+      <image src="/image/selected.png" wx:if="{{allselectd}}"></image>
+      <image wx:else src="/image/unselect.png"/>
+      <text>全选</text>
+  </view>
+
+  <view class="counts">
   
+    合计:<text>￥{{countsmoney}}</text>
+  </view>
+
+  <view class="pay">
+   去结算（ {{paymoney}} ）
+  </view>
+
+
+</view>
+
 
   
 
