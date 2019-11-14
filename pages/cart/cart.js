@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+       cartArray:[]
   },
 
   /**
@@ -13,7 +13,13 @@ Page({
    */
   onLoad: function (options) {
 
+    console.log("执行了cart的onload方法哟");
+   
+           
+   
+    
   },
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -26,7 +32,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const self = this;
 
+    wx.getStorage({
+      key: 'cartinfo',
+      success: function (res) {
+        let arr = res.data;
+        console.log('arr', arr)
+        self.setData({
+          cartArray: arr
+        })
+
+        let length = self.data.cartArray.length;
+        console.log('cartArray', self.data.cartArray.length);
+        length > 0 ?
+          wx.setTabBarBadge({
+            index: 2,
+            text: String(length)
+          }) : wx.removeTabBarBadge({
+            index: 2
+          })
+
+
+      }
+    })
   },
 
   /**

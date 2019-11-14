@@ -1,2 +1,50 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="containers">
+ <view class="nolist" wx:if="{{cartArray.length==0}}">
+   <view class="view-image">
+     <image src="/image/shop_cart.png"/>
+   </view>
+
+   <view class="cart-txt">
+      购物车空空如也，赶快去逛逛吧~
+   </view>
+  </view>
+
+
+
+  <view class="list">
+      <block>
+        <view class="list-item">
+
+            <view class="view-image">
+                <image src="/image/unselect.png" class="icon"></image>
+            </view>
+
+            <view class="view-bd">
+              <view class="bd-image">
+                <image src="/image/classify/miphone.png"/>
+              </view>
+
+               <view class="view-desc">
+                 <view class="title">黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机</view>
+                 <text class="price">338800</text>
+                 <amout/>
+               </view>
+
+            </view>
+        </view>
+      </block>
+
+
+  </view>
+
+
+  
+
+  
+
+
+
+
+
+</view>
+

@@ -1,1 +1,82 @@
 /* pages/cart/cart.wxss */
+.containers {
+  height: 100%;
+  width: 100%;
+}
+.nolist {
+  padding-top: 100rpx;
+  margin:  0 auto;
+  text-align: center;
+}
+.view-image image {
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 70rpx;
+}
+ .cart-txt{
+ font-size: 32rpx;
+  color: rgba(51,51,51,.66);
+
+ }
+
+
+ /* //选择图标 */
+
+ .list {
+   width: 100%;
+   margin-left: 8rpx;
+ }
+ .list-item {
+   display: flex;
+   align-items: center;
+   margin-top: 8rpx;
+
+   
+ }
+ .view-bd {
+   /* border: 1px solid pink; */
+   border-radius: 10rpx;
+   display: flex;
+   padding: 20rpx 0;
+   padding-left: 2rpx;
+   margin-left: 12rpx;
+   margin-right: 20rpx;
+   box-shadow: 0 1rpx 4rpx rgba(150,150,150,0.3);
+
+ }
+ .view-image ,.view-image .icon {
+   width: 40rpx;
+   height: 40rpx;
+ }
+ .view-image .icon {
+   vertical-align: center;
+ }
+
+ .view-bd image {
+  width: 200rpx;
+  height: 200rpx;
+
+ }
+
+ .view-desc .title {
+     overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+margin: 10rpx 0;
+font-size: 28rpx;
+
+ } 
+
+ .price {
+   display: inline-block;
+   margin-top: 30rpx;
+   color: #e4393c;
+font-size: 30rpx;
+
+ }
+ amout {
+   margin-top: 48rpx;
+   float: right;
+ }

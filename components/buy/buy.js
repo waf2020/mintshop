@@ -45,7 +45,8 @@ Component({
         hidebuy: true
       })
 
-      this.triggerEvent('mycounts', this.data.counts)
+      this.triggerEvent('mycounts', this.data.counts);
+      this.triggerEvent('myjoincart');
     }
   }
 })

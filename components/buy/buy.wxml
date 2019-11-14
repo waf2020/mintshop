@@ -20,7 +20,7 @@
        <amout bind:mycountcheck="handlecountcheck"/>
      </view>
 
-    <view class="btn-bom" bind:tap="jioncart">
+    <view class="btn-bom" catch:tap="jioncart">
       加入购物车
     </view>
   </view>

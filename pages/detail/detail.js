@@ -13,9 +13,10 @@ Page({
       partData:[],
       baitiao:[],
       baitiaodesc:"【白条支付】首单享立减优惠",
-      count:1,
-      hidebaitiao:true,
-    hidebuy:true
+      count:1,           //已选多少件
+      hidebaitiao:true,  //是否影藏白条
+      hidebuy:true ,    //是否隐藏
+      cartcount:0
       
   },
 
@@ -48,6 +49,13 @@ Page({
 
       wx.hideLoading()
     })
+    wx.getStorage({
+      key: 'cartinfo',
+      success: function(res) {
+        self.setBage(res.data);
+      },
+    })
+   
 
   },
 
@@ -134,7 +142,107 @@ Page({
       this.setData({
         count: e.detail
       })
+  },
+
+//加入购物车
+  handlecart(){
+    const self=this;
+    //console.log("加入购物车");
+    wx.getStorage({
+      key: 'cartinfo',
+      success: function(res) {
+        let cartArray = res.data; //购物车数据
+        let partlist = self.data.partData //当前数据
+        let tempId = partlist.id;  //当前ID
+        
+        let ifEXIT=false;
+        for (let i = 0; i < cartArray.length;i++){
+          if (cartArray[i].id == tempId){
+            //console.log('相等');
+            //console.log('cartArray[i].id', cartArray[i].id);
+            //console.log('tempId', tempId);
+            let count = self.data.count;
+            cartArray[i].total += count;
+          //  console.log('cartArray[i].total', cartArray[i].total);
+            ifEXIT=true;
+            
+          }
+
+          wx.setStorage({
+            key: 'cartinfo',
+            data: cartArray,
+          })
+         
+        }
+        
+
+        if (!ifEXIT){
+          //console.log("没有相同");
+          partlist.total = self.data.count;
+         // console.log('partlist.total', partlist.total);
+          cartArray.push(partlist);
+          wx.setStorage({
+            key: 'cartinfo',
+            data: cartArray,
+          })
+
+        }
+
+        self.setBage(cartArray);
+
+        // cartArray.forEach((value,item)=>{
+        //   if (value.id == tempId){
+        //      console.log('相等');
+        //     let count = self.data.count; //获取当前数量
+        //     value.total += count ;         //修改购物车该商品数量
+        //     console.log('value.total', value.total);
+        //     }
+        //     else{
+        //      console.log('购物车没有该商品');
+        //     partlist.total = self.data.count
+        //     cartArray.push(partlist);
+
+          
+        //     }
+        //   wx.setStorage({
+        //     key: 'cartinfo',
+        //     data: cartArray,
+        //   })
+        //  })
+
+      },
+      fail(){
+        //console.log("我没有数据~");
+        //console.log('self', self);
+        let cartarray = [];
+        self.data.partData.total = self.data.count;  //获取当前数量 加入到partData.total中
+        //console.log('self.data.partData.total', self.data.partData.total);
+
+        cartarray.push(self.data.partData); 
+        
+         wx.setStorage({
+           key: 'cartinfo',
+           data: cartarray,
+         })
+        self.setBage(cartarray);
+      }
+    })
+  },
+  setBage(arr){
+     this.setData({
+       cartcount: arr.length
+     })
+  },
+  clickcart(){
+   
+     wx.switchTab({
+       url: '/pages/cart/cart',
+
+
+     })
+
   }
+  
 
  
 })

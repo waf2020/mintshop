@@ -26,13 +26,13 @@
   
      <!-- 底部 购物车 -->
    <view class="btn-bar">
-      <view class="cart">
+      <view class="cart" catch:tap="clickcart">
          <image src='/image/cart.png'/>
-         <text class="bage">1</text>
+         <text class="bage" wx:if="{{cartcount>0}}">{{cartcount}}</text>
          <view class="cart-text">购物车</view>
       </view>
 
-      <view class="jion-cart">
+      <view class="jion-cart" catch:tap="handlecart">  <!-- 加入购物车 -->
       加入购物车
       </view>
    </view>
@@ -40,7 +40,11 @@
    <!-- 白条 -->
    <iou baitiao="{{baitiao}}" hidebaitiao="{{hidebaitiao}}" bind:checkbaitiaodesc="handledesc"/>
    <!-- 已选件数 -->
-   <buy hidebuy="{{hidebuy}}" bind:mycounts="handleCounts" iteminfo="{{partData}}"/>
+   <buy hidebuy="{{hidebuy}}" 
+   bind:mycounts="handleCounts" 
+   iteminfo="{{partData}}"
+   catch:myjoincart="handlecart"                   
+   />
 
 
 </view>
