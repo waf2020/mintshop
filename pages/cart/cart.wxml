@@ -1,21 +1,23 @@
 <view class="containers">
+
  <view class="nolist" wx:if="{{cartArray.length==0}}">
    <view class="view-image">
-     <image src="/image/shop_cart.png"/>
+     <image src="/image/shop_cart.png" class="nolistimg"/>
    </view>
 
-   <view class="cart-txt">
+   <text class="cart-txt">
       购物车空空如也，赶快去逛逛吧~
-   </view>
+   </text>
+
   </view>
 
 
 <!-- 购物车list item -->
   <view wx:else class="list">
       <block wx:for="{{cartArray}}" wx:key="{{index}}">
-        <view class="list-item">
+        <view class="list-item {{item.istouch==true ? 'touch-move-active' : ''}}" >
 
-            <view class="view-image" bind:tap="checkimageselect" data-index="{{index}}">
+            <view class="view-image" bind:tap="checkimageselect" data-index="{{index}}" data-id="{{item.id}}">
                 <image wx:if="{{item.select}}" src="/image/selected.png" class="icon"/>
               
                 <image wx:else src="/image/unselect.png" class="icon"/>
@@ -34,6 +36,10 @@
                   bind:mycountcheck="checkcartdefaule"
                   data-index="{{index}}"
                  />
+               </view>
+
+              <view class="del">
+                 <text>删除</text>
                </view>
 
             </view>
@@ -56,7 +62,7 @@
   </view>
 
   <view class="pay">
-   去结算（ {{paymoney}} ）
+   去结算（ {{paycount}} ）
   </view>
 
 

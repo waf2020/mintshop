@@ -20,7 +20,7 @@ Page({
        currentIndex: e.currentTarget.dataset.index
      })
 
-     console.log("")
+     
      
   },
 
