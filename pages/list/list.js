@@ -19,7 +19,7 @@ Page({
    */
   onLoad: function (options) {
 
- wx:wx.showLoading({
+wx.showLoading({
    title: 'loading...',
    
  }),
